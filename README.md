@@ -49,12 +49,12 @@ behave as closely as possible to ECMAScript 6 (Harmony).
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
 <a name="exp_module_to-object-x--module.exports"></a>
-### `module.exports(value)` ⇒ <code>string</code> ⏏
+### `module.exports(value)` ⇒ <code>Object</code> ⏏
 The abstract operation ToObject converts argument to a value of
 type Object.
 
 **Kind**: Exported function  
-**Returns**: <code>string</code> - The `value` converted to an object.  
+**Returns**: <code>Object</code> - The `value` converted to an object.  
 **Throws**:
 
 - <code>TypeError</code> If `value` is a `null` or `undefined`.
