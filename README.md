@@ -31,7 +31,7 @@ ES6-compliant shim for ToObject.
 Requires ES3 or above.
 
 **See**: [7.1.13 ToObject ( argument )](http://www.ecma-international.org/ecma-262/6.0/#sec-toobject)  
-**Version**: 1.1.1  
+**Version**: 1.2.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
