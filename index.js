@@ -1,7 +1,7 @@
 /**
  * @file ES6-compliant shim for ToObject.
  * @see {@link http://www.ecma-international.org/ecma-262/6.0/#sec-toobject|7.1.13 ToObject ( argument )}
- * @version 1.4.0
+ * @version 1.4.1
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -10,7 +10,7 @@
 
 'use strict';
 
-var $requireObjectCoercible = require('require-object-coercible-x');
+var requireObjectCoercible = require('require-object-coercible-x');
 
 /**
  * The abstract operation ToObject converts argument to a value of
@@ -28,6 +28,6 @@ var $requireObjectCoercible = require('require-object-coercible-x');
  * ToObject(true); // Object(true)
  * ToObject(Symbol('foo')); // Object(Symbol('foo'))
  */
-module.exports = function ToObject(value) {
-  return Object($requireObjectCoercible(value));
+module.exports = function toObject(value) {
+  return Object(requireObjectCoercible(value));
 };
