@@ -1,6 +1,6 @@
 {
   "name": "to-object-x",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "ES6-compliant shim for ToObject.",
   "homepage": "https://github.com/Xotic750/to-object-x",
   "author": {
@@ -11,7 +11,7 @@
   "keywords": [
     "ES6",
     "ToObject",
-    "module",
+    "abstract",
     "javascript",
     "nodejs",
     "browser"
@@ -29,6 +29,7 @@
     "url": "https://github.com/Xotic750/to-object-x/issues"
   },
   "dependencies": {
+    "cached-constructors-x": "^1.0.0",
     "require-object-coercible-x": "^1.4.1"
   },
   "devDependencies": {
