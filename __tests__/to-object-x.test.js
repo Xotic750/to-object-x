@@ -1,57 +1,40 @@
+import noop from 'lodash/noop';
+import $toObject from '../src/to-object-x';
+
+/* eslint-disable-next-line compat/compat */
 const hasSymbol = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 const ifSymbolIt = hasSymbol ? it : xit;
-let $toObject;
-
-if (typeof module === 'object' && module.exports) {
-  require('es5-shim');
-  require('es5-shim/es5-sham');
-
-  if (typeof JSON === 'undefined') {
-    JSON = {};
-  }
-
-  require('json3').runInContext(null, JSON);
-  require('es6-shim');
-  const es7 = require('es7-shim');
-  Object.keys(es7).forEach(function(key) {
-    const obj = es7[key];
-
-    if (typeof obj.shim === 'function') {
-      obj.shim();
-    }
-  });
-  $toObject = require('../../index.js');
-} else {
-  $toObject = returnExports;
-}
 
 describe('basic tests', function() {
   it('should throw TypeError', function() {
+    expect.assertions(3);
     expect(function() {
       $toObject();
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       $toObject(undefined);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       $toObject(null);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
   });
 
   it('should be correct type in each case', function() {
+    expect.assertions(8);
     expect(typeof $toObject(1)).toBe('object');
     expect(typeof $toObject(true)).toBe('object');
     expect(typeof $toObject('')).toBe('object');
     expect(typeof $toObject([])).toBe('object');
     expect(typeof $toObject({})).toBe('object');
     expect(typeof $toObject(Object('a'))).toBe('object');
-    expect(typeof $toObject(function() {})).toBe('function');
+    expect(typeof $toObject(noop)).toBe('function');
     expect(typeof $toObject(new Date())).toBe('object');
   });
 
   it('should have correct values', function() {
+    expect.assertions(7);
     const str = $toObject('foo');
     expect(typeof str).toBe('object');
     expect(str).toHaveLength(3);
@@ -63,11 +46,12 @@ describe('basic tests', function() {
   });
 
   it('should be same object', function() {
+    expect.assertions(6);
     let testObject = [];
     expect($toObject(testObject)).toBe(testObject);
     testObject = {};
     expect($toObject(testObject)).toBe(testObject);
-    testObject = function() {};
+    testObject = noop;
 
     expect($toObject(testObject)).toBe(testObject);
     testObject = Object('test');
@@ -79,6 +63,8 @@ describe('basic tests', function() {
   });
 
   ifSymbolIt('should return Symbol', function() {
+    expect.assertions(1);
+    /* eslint-disable-next-line compat/compat */
     const sym = Symbol('foo');
     expect($toObject(sym)).toStrictEqual(Object(sym));
   });

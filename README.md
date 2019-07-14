@@ -21,16 +21,15 @@
 <a name="module_to-object-x"></a>
 
 ## to-object-x
+
 ES6-compliant shim for ToObject.
 
-**See**: [7.1.13 ToObject ( argument )](http://www.ecma-international.org/ecma-262/6.0/#sec-toobject)  
-**Version**: 1.5.0  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
+**See**: [7.1.13 ToObject ( argument )](http://www.ecma-international.org/ecma-262/6.0/#sec-toobject)
+
 <a name="exp_module_to-object-x--module.exports"></a>
 
 ### `module.exports(value)` ⇒ <code>Object</code> ⏏
+
 The abstract operation ToObject converts argument to a value of
 type Object.
 
@@ -40,18 +39,18 @@ type Object.
 
 - <code>TypeError</code> If `value` is a `null` or `undefined`.
 
-
-| Param | Type | Description |
-| --- | --- | --- |
+| Param | Type            | Description             |
+| ----- | --------------- | ----------------------- |
 | value | <code>\*</code> | The `value` to convert. |
 
-**Example**  
-```js
-var ToObject = require('to-object-x');
+**Example**
 
-ToObject(); // TypeError
-ToObject(null); // TypeError
-ToObject('abc'); // Object('abc')
-ToObject(true); // Object(true)
-ToObject(Symbol('foo')); // Object(Symbol('foo'))
+```js
+import toObject from 'to-object-x';
+
+toObject(); // TypeError
+toObject(null); // TypeError
+console.log(toObject('abc')); // Object('abc')
+console.log(toObject(true)); // Object(true)
+console.log(toObject(Symbol('foo'))); // Object(Symbol('foo'))
 ```

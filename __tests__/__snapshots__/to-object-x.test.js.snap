@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic tests should throw TypeError 1`] = `"Cannot call method on undefined"`;
+
+exports[`basic tests should throw TypeError 2`] = `"Cannot call method on undefined"`;
+
+exports[`basic tests should throw TypeError 3`] = `"Cannot call method on null"`;
