@@ -1,7 +1,6 @@
 import noop from 'lodash/noop';
 import $toObject from '../src/to-object-x';
 
-/* eslint-disable-next-line compat/compat */
 const hasSymbol = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 const ifSymbolIt = hasSymbol ? it : xit;
 
@@ -64,7 +63,7 @@ describe('basic tests', function() {
 
   ifSymbolIt('should return Symbol', function() {
     expect.assertions(1);
-    /* eslint-disable-next-line compat/compat */
+
     const sym = Symbol('foo');
     expect($toObject(sym)).toStrictEqual(Object(sym));
   });
