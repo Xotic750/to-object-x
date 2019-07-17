@@ -10,6 +10,8 @@ const castObject = {}.constructor;
  * @throws {TypeError} If `value` is a `null` or `undefined`.
  * @returns {!object} The `value` converted to an object.
  */
-export default function toObject(value) {
+const toObject = function toObject(value) {
   return castObject(requireObjectCoercible(value));
-}
+};
+
+export default toObject;

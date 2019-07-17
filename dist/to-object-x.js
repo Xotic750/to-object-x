@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-07-16T21:21:41.239Z",
+  "date": "2019-07-17T16:58:13.571Z",
   "describe": "",
   "description": "ES6-compliant shim for ToObject.",
   "file": "to-object-x.js",
-  "hash": "bbe0156f67603c02fc8a",
+  "hash": "14399cb7257ca40d6a47",
   "license": "MIT",
-  "version": "2.0.4"
+  "version": "2.0.5"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -137,10 +137,12 @@ __webpack_require__.r(__webpack_exports__);
  * @param {*} [value] - The value to check.
  * @returns {boolean} Returns `true` if `value` is nullish, else `false`.
  */
-function isNil(value) {
+var isNil = function isNil(value) {
   /* eslint-disable-next-line lodash/prefer-is-nil */
   return value === null || typeof value === 'undefined';
-}
+};
+
+/* harmony default export */ var is_nil_x_esm = (isNil);
 
 
 // CONCATENATED MODULE: ./node_modules/require-object-coercible-x/dist/require-object-coercible-x.esm.js
@@ -154,17 +156,18 @@ function isNil(value) {
  * @returns {string} The `value`.
  */
 
-function requireObjectCoercible(value) {
-  if (isNil(value)) {
+var require_object_coercible_x_esm_requireObjectCoercible = function requireObjectCoercible(value) {
+  if (is_nil_x_esm(value)) {
     throw new TypeError("Cannot call method on ".concat(value));
   }
 
   return value;
-}
+};
+
+/* harmony default export */ var require_object_coercible_x_esm = (require_object_coercible_x_esm_requireObjectCoercible);
 
 
 // CONCATENATED MODULE: ./dist/to-object-x.esm.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return toObject; });
 
 var castObject = {}.constructor;
 /**
@@ -176,9 +179,11 @@ var castObject = {}.constructor;
  * @returns {!object} The `value` converted to an object.
  */
 
-function toObject(value) {
-  return castObject(requireObjectCoercible(value));
-}
+var to_object_x_esm_toObject = function toObject(value) {
+  return castObject(require_object_coercible_x_esm(value));
+};
+
+/* harmony default export */ var to_object_x_esm = __webpack_exports__["default"] = (to_object_x_esm_toObject);
 
 
 

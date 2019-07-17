@@ -9,8 +9,10 @@ var castObject = {}.constructor;
  * @returns {!object} The `value` converted to an object.
  */
 
-export default function toObject(value) {
+var toObject = function toObject(value) {
   return castObject(requireObjectCoercible(value));
-}
+};
+
+export default toObject;
 
 //# sourceMappingURL=to-object-x.esm.js.map
