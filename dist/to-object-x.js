@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-07-18T18:41:11.309Z",
+  "date": "2019-07-19T21:50:13.406Z",
   "describe": "",
   "description": "ES6-compliant shim for ToObject.",
   "file": "to-object-x.js",
   "hash": "14399cb7257ca40d6a47",
   "license": "MIT",
-  "version": "2.0.10"
+  "version": "2.0.11"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
