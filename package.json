@@ -1,6 +1,6 @@
 {
   "name": "to-object-x",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "ES6-compliant shim for ToObject.",
   "homepage": "https://github.com/Xotic750/to-object-x",
   "author": {
@@ -51,8 +51,8 @@
     "url": "https://github.com/Xotic750/to-object-x/issues"
   },
   "dependencies": {
-    "cached-constructors-x": "^2.1.0",
-    "require-object-coercible-x": "^2.0.27"
+    "cached-constructors-x": "^2.2.0",
+    "require-object-coercible-x": "^2.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
