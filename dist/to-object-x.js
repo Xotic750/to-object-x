@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-09-05T19:18:18.274Z",
+  "date": "2020-01-30T13:23:37.375Z",
   "describe": "",
   "description": "ES6-compliant shim for ToObject.",
   "file": "to-object-x.js",
